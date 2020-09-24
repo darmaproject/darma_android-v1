@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FFFFFF</color>
+    <color name="colorPrimaryDark">#202640</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="color_bg_green">#fff1fafa</color>
+    <color name="color_top_bg">#FFFFFF</color>
+    <color name="color_page_bg">#FFFFFF</color>
+    <color name="color_white">#FFFFFF</color>
+    <color name="text_color_white">#FFFFFF</color>
+    <color name="text_color_black">#202640</color>
+    <color name="text_color_red">#EC4561</color>
+    <color name="text_color_disable">#D2D6DC</color>
+    <color name="text_color_very_gray">#D2D6DC</color>
+    <color name="text_color_gray">#9CA8B3</color>
+    <color name="text_color_green">#3EB7BA</color>
+    <color name="text_color_pink">#AF7EC1</color>
+    <color name="line_color">#F4F4F4</color>
+    <color name="line_color_more_deep">#E5E7EC</color>
+    <color name="input_bottom_line_color">#D2D6DC</color>
+
+    <color name="input_bottom_line_on_color">#3EB7BA</color>
+
+    <color name="input_password_btn_color">#D2D6DC</color>
+    <color name="black_overlay">#66000000</color>
+
+</resources>

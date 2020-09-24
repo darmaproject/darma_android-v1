@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/color_page_bg"
+        android:gravity="center_horizontal"
+        tools:context=".ui.activity.ReScanBlockActivity">
+
+
+
+    <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            style="@style/toolBarStyle"
+
+            >
+
+        <TextView
+                android:id="@+id/tv_header_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:text="@string/str_rescan"
+                style="@style/TextView.titleText"
+                />
+    </android.support.v7.widget.Toolbar>
+
+
+    <TextView
+            android:layout_marginTop="40dp"
+            style="@style/TextView.black"
+            android:text="@string/str_re_scan_notice_1"/>
+    <TextView
+            android:layout_marginTop="20dp"
+            style="@style/TextView.black"
+            android:text="@string/str_re_scan_notice_2"/>
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+    <com.dd.CircularProgressButton
+            android:id="@+id/btn_confirm"
+            style="@style/circularProgressBtnView"
+            app:cpb_textIdle="@string/str_confirm"
+            android:layout_marginBottom="@dimen/page_bottom_margin"
+            />
+</LinearLayout>

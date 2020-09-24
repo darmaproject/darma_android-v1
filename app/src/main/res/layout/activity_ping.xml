@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/color_page_bg"
+        tools:context=".ui.activity.PingActivity">
+
+    <include layout="@layout/layout_top_view"/>
+
+    <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+        <LinearLayout
+                android:id="@+id/ll_loading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_gravity="center"
+                >
+            <ProgressBar
+
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    style="@style/Progressbar"
+                    />
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    style="@style/TextView.pink"
+                    android:text="@string/str_loading"/>
+        </LinearLayout>
+
+
+
+        <LinearLayout
+                android:id="@+id/ll_complete"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/page_margin"
+                android:orientation="vertical"
+                >
+
+            <com.darma.wallet.widget.PingProgressBarView
+                    android:id="@+id/progressbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                    android:id="@+id/ll_success"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:orientation="horizontal">
+                <TextView
+                        android:id="@+id/tv_block_height"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:layout_weight="1"
+                        style="@style/TextView.pink"/>
+                <TextView
+                        android:id="@+id/tv_ping"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:layout_weight="1"
+                        style="@style/TextView.pink"/>
+
+            </LinearLayout>
+
+            <TextView
+                    android:id="@+id/tv_fail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:visibility="gone"
+                    style="@style/TextView.gray"
+                    android:text="@string/str_node_ping_fail"/>
+         </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

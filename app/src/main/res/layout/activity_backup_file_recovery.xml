@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/color_page_bg"
+        tools:context=".ui.activity.BackupFileRecoveryActivity">
+
+
+<include layout="@layout/layout_top_view"/>
+
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="@dimen/page_margin"
+            android:orientation="vertical">
+
+        <android.support.design.widget.TextInputLayout
+                android:id="@+id/et_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/str_wallet_name"
+                android:orientation="vertical"
+                app:errorEnabled="true"
+                app:errorTextAppearance="@style/errorAppearance"
+                app:hintTextAppearance="@style/hintTextStyle">
+
+            <android.support.design.widget.TextInputEditText
+                    style="@style/EditText.inputText"
+                    android:maxLength="16"
+
+                    android:inputType="textEmailAddress"
+                    android:imeOptions="actionNext"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+                android:id="@+id/et_height"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/str_wallet_topoheight"
+                android:orientation="vertical"
+                app:errorEnabled="true"
+                app:errorTextAppearance="@style/errorAppearance"
+                app:hintTextAppearance="@style/hintTextStyle">
+
+            <android.support.design.widget.TextInputEditText
+                    style="@style/EditText.inputText.number"
+
+                    android:inputType="numberDecimal"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+                android:id="@+id/et_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/str_back_up_time"
+                android:orientation="vertical"
+                app:errorEnabled="true"
+                app:errorTextAppearance="@style/errorAppearance"
+                app:hintTextAppearance="@style/hintTextStyle">
+
+            <android.support.design.widget.TextInputEditText
+                    style="@style/EditText.inputText"
+
+                    android:enabled="false"
+                    android:imeOptions="actionNext"/>
+        </android.support.design.widget.TextInputLayout>
+
+
+        <android.support.design.widget.TextInputLayout
+                android:id="@+id/et_file_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/str_back_up_file_name"
+                android:orientation="vertical"
+                app:errorEnabled="true"
+                app:errorTextAppearance="@style/errorAppearance"
+                app:hintTextAppearance="@style/hintTextStyle">
+
+            <android.support.design.widget.TextInputEditText
+                    style="@style/EditText.inputText"
+
+                    android:enabled="false"
+                    android:imeOptions="actionNext"/>
+        </android.support.design.widget.TextInputLayout>
+        <android.support.design.widget.TextInputLayout
+                android:id="@+id/et_pwd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:hint="@string/str_password"
+                android:orientation="vertical"
+                app:errorEnabled="true"
+                android:layout_marginTop="5dp"
+                app:passwordToggleEnabled="true"
+                app:passwordToggleTint="@color/input_password_btn_color"
+                app:errorTextAppearance="@style/errorAppearance"
+                app:hintTextAppearance="@style/hintTextStyle">
+
+            <android.support.design.widget.TextInputEditText
+                    style="@style/EditText.inputText.password"
+                    android:imeOptions="actionDone"/>
+        </android.support.design.widget.TextInputLayout>
+
+
+
+
+
+    </LinearLayout>
+    <com.dd.CircularProgressButton
+            android:id="@+id/btn_recovery_wallet"
+            style="@style/circularProgressBtnView"
+            app:cpb_textIdle="@string/str_recovery_wallet"
+            android:layout_marginBottom="@dimen/page_bottom_margin"
+            />
+</LinearLayout>

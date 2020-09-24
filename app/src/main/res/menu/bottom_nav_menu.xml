@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+            android:id="@+id/navigation_wallet"
+            android:icon="@drawable/selector_bottom_wallet"
+            android:checked="true"
+            android:title="@string/str_wallet"/>
+
+    <item
+            android:id="@+id/navigation_transfer"
+            android:icon="@drawable/selector_bottom_transfer"
+            android:visible="false"
+            android:title="@string/str_transfer"/>
+
+    <item
+            android:id="@+id/navigation_setting"
+            android:icon="@drawable/selector_bottom_setting"
+            android:title="@string/str_setting"/>
+
+</menu>

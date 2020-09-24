@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+            android:id="@+id/block_browser"
+            android:icon="@mipmap/ic_block_browser"
+            android:title="@string/str_block_explor"/>
+    <item
+            android:id="@+id/transaction_key"
+            android:icon="@mipmap/ic_transaction_key"
+            android:title="@string/str_tx_key"/>
+    <item
+            android:id="@+id/share"
+            android:icon="@mipmap/ic_share_gray"
+            android:title="@string/str_share"
+            app:showAsAction="collapseActionView"/>
+
+</menu>

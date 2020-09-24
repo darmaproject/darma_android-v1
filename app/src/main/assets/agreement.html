@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script type="text/javascript">
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+              resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+              recalc = function () {
+                var clientWidth = docEl.clientWidth
+                if (!clientWidth) return
+                docEl.style.fontSize = 20 * (clientWidth / 375) + 'px'
+              }
+            if (!doc.addEventListener) return
+            win.addEventListener(resizeEvt, recalc, false)
+            doc.addEventListener('DOMContentLoaded', recalc, false)
+          })(document, window)
+  </script>
+    <style>
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			body,html{
+				font-size: 16px;
+				font-family:PingFang SC;
+				background: #FBFBFBFF;
+			}
+			.container{
+				margin: 1rem;
+			}
+			.container h1,.container h2 {
+				color: #9CA8B3;
+				font-size: .8rem;
+				font-weight:400;
+				line-height:2rem;
+			}
+			.container p{
+				font-size: .7rem;
+				font-weight:400;
+				color:rgba(32,38,64,1);
+				text-indent:2em;
+				line-height: 1rem;
+			}
+			.container li{
+				list-style-type:none;
+				font-size: .7rem;
+				font-weight:400;
+				color:rgba(32,38,64,1);
+				text-indent:2em;
+				line-height: 1rem;
+			}
+		</style>
+</head>
+<body>
+<div class="container">
+    <h1>Privacy Policy</h1>
+
+    <p>This page informs you of our policies regarding the collection,
+        use and disclosure of personal information we receive from users of our
+        app (Darma Wallet).</p>
+    </p>
+    <p>By using the app, you agree to the collection and use of information in
+        accordance with this policy.
+    </p>
+    <h2>Data Collected</h2>
+    <p>Personal data is any kind of data that could identify an individual.
+    </p>
+    <p>Darma keys and public addresses are collected and processed by the app locally
+        for the purpose of processing transactions and transmitted into the Darma Network
+        in encrypted form.
+    </p>
+    <p>Other personal data is not collected by the app.</p>
+    <p>If you use the USD/EUR exchange (optional) functionality, Darma wallet fetches the exchange
+        rate through the public API of exchange.darmacash.com.
+        See their privacy policy at https://www.darmacash.com/legal/privacy for
+        details on how data in your requests is collected (especially the
+        section "Information We Collect Automatically").</p>
+    <h2>App Permissions</h2>
+    <ul>
+        <li>INTERNET : Connect to the Darma Network via a Darma Daemon Node</li>
+        <li>READ_EXTERNAL_STORAGE : Read wallet files stored on the device</li>
+        <li>WRITE_EXTERNAL_STORAGE : Write wallet files stored on the device</li>
+        <li>WAKE_LOCK : Keep device awake while syncing</li>
+        <li>CAMERA : Scan QR Codes for receiving Darma</li>
+    </ul>
+    <h2>Changes to this Privacy Policy</h2>
+    <p>We may update this privacy policy from time to time. We will notify
+        you of any changes by posting the new privacy policy in the app and on the
+        website (www.darmacash.com)
+        You are advised to review this privacy policy periodically for any changes.
+    <p>This Privacy Policy was last updated: 2nd November, 2019.
+    </p>
+    <h2>Contact Us</h2>
+    <p>If you have any questions about our privacy policy,
+        or how your data is being collected and processed,
+        please e-mail support@darmacash.com.
+    </p>
+
+    <h1>Copyright</h1>
+    <p>Copyright (c) 2018-2019, The Darma Project</p>
+
+    <p>Portions Copyright (c) 2014-2018, The Monero Project</p>
+
+    <p>Portions Copyright (c) 2012-2013, The Cryptonote developers</p>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:background="@color/color_page_bg"
+        tools:context=".ui.activity.MnemonicWordActivity">
+
+    <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            style="@style/toolBarStyle"
+
+            >
+
+        <TextView
+                android:id="@+id/tv_header_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:text="@string/str_create_wallet"
+                style="@style/TextView.titleText"
+                />
+
+    </android.support.v7.widget.Toolbar>
+
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/page_margin"
+            android:paddingRight="@dimen/page_margin"
+            android:background="@color/color_bg_green">
+
+        <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_color_green"
+                android:textSize="12sp"
+                android:lineSpacingMultiplier="1.2"
+                android:drawablePadding="@dimen/point_left_padding"
+                android:drawableLeft="@mipmap/ic_point"
+                android:text="@string/str_mnemonic_notice_1"
+                android:layout_marginTop="10dp"
+                />
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_color_green"
+                android:textSize="12sp"
+
+                android:drawablePadding="@dimen/point_left_padding"
+                android:drawableLeft="@mipmap/ic_point"
+                android:text="@string/str_mnemonic_notice_2"
+                android:lineSpacingMultiplier="1.2"
+                android:layout_marginTop="5dp"
+                />
+
+        <TextView
+
+                android:drawablePadding="@dimen/point_left_padding"
+                android:drawableLeft="@mipmap/ic_point"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_color_green"
+                android:textSize="12sp"
+                android:text="@string/str_mnemonic_notice_3"
+                android:lineSpacingMultiplier="1.2"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                />
+    </LinearLayout>
+
+
+    <TextView
+            style="@style/TextView.subtitle"
+
+            android:text="@string/str_please_copy_your_mnemonic"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="15dp"
+            />
+
+
+    <android.support.v7.widget.RecyclerView
+            android:id="@+id/mRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="@dimen/page_margin"
+            android:layout_marginRight="@dimen/page_margin"
+            android:layout_weight="1">
+
+    </android.support.v7.widget.RecyclerView>
+
+
+
+
+
+    <Button
+            android:id="@+id/btn_next"
+            style="@style/BtnView.green"
+            android:text="@string/str_I_have_copied_and_saved"
+            android:layout_marginBottom="@dimen/page_bottom_margin"
+
+
+            />
+
+
+
+</LinearLayout>

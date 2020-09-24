@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_white">
+
+    <TextView
+
+
+            android:id="@+id/tv_pair"
+            style="@style/TextView.black"
+            android:layout_marginLeft="@dimen/page_margin"
+            android:layout_marginTop="10dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+            android:id="@+id/tv_amount"
+            style="@style/TextView.black"
+            android:layout_marginRight="@dimen/page_margin"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_pair" />
+
+    <TextView
+            android:id="@+id/tv_time"
+            style="@style/TextView.smallGray"
+            android:layout_marginTop="10dp"
+            app:layout_constraintLeft_toLeftOf="@id/tv_pair"
+            app:layout_constraintTop_toBottomOf="@id/tv_pair" />
+
+    <TextView
+            android:id="@+id/tv_quota_amount"
+            style="@style/TextView.smallGray"
+            app:layout_constraintRight_toRightOf="@id/tv_amount"
+            app:layout_constraintTop_toTopOf="@id/tv_time" />
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/line_color"
+            app:layout_constraintTop_toBottomOf="@id/tv_time" />
+</android.support.constraint.ConstraintLayout>

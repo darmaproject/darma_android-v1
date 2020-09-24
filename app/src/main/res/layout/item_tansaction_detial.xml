@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="15dp"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <TextView
+            android:id="@+id/tv_title"
+            style="@style/TextView.smallGray"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            />
+
+    <TextView
+            android:id="@+id/tv_address"
+            style="@style/TextView.black"
+            app:layout_constraintTop_toBottomOf="@id/tv_title"
+            app:layout_constraintLeft_toLeftOf="@id/tv_title"
+            android:layout_marginTop="8dp"
+            android:gravity="left"
+            />
+    <TextView
+            style="@style/TextView.black"
+
+            android:id="@+id/tv_amount"
+            app:layout_constraintTop_toBottomOf="@id/tv_address"
+            app:layout_constraintLeft_toLeftOf="@id/tv_title"
+            android:layout_marginTop="8dp"
+            />
+    <TextView
+            style="@style/TextView.gray"
+
+            android:id="@+id/tv_unit"
+            app:layout_constraintTop_toTopOf="@id/tv_amount"
+            app:layout_constraintLeft_toRightOf="@id/tv_amount"
+            android:layout_marginLeft="5dp"
+            />
+    <View
+            app:layout_constraintTop_toBottomOf="@id/tv_unit"
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/input_bottom_line_color"/>
+</android.support.constraint.ConstraintLayout>

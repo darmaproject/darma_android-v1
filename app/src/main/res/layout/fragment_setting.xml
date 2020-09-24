@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:background="@color/color_page_bg"
+              tools:context=".ui.fragment.SettingFragment">
+
+
+
+    <android.support.constraint.ConstraintLayout
+            android:id="@+id/cl_top"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/top_height"
+            android:background="@color/color_top_bg"
+            android:orientation="horizontal">
+
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_title"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:text="@string/str_setting"
+                android:maxLength="12"
+                android:ellipsize="end"
+                android:textColor="@color/text_color_black"
+                android:textSize="16sp"
+                />
+    </android.support.constraint.ConstraintLayout>
+
+    
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <include layout="@layout/view_top_shadow_layout"/>
+
+            <com.darma.wallet.widget.SettingItemView
+                    android:id="@+id/item_node"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:titleText="@string/str_now_node"
+
+                    />
+            <com.darma.wallet.widget.SettingItemView
+                    android:id="@+id/item_interval"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:titleText="@string/str_sync_interval"
+
+                    />
+
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:background="@color/line_color"/>
+
+            <com.darma.wallet.widget.SettingItemView
+                    android:id="@+id/item_change_pwd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:titleText="@string/str_change_pwd"
+
+                    />
+            <com.darma.wallet.widget.SettingItemView
+                    android:id="@+id/item_rescan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:titleText="@string/str_rescan"
+
+                    />
+
+            <com.darma.wallet.widget.SettingItemView
+                    android:id="@+id/item_private_key"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:titleText="@string/str_show_key"
+                    />
+
+            <com.darma.wallet.widget.SettingItemView
+                    android:id="@+id/item_seed"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:titleText="@string/str_seed_key"
+                    />
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:background="@color/line_color"/>
+
+            <com.darma.wallet.widget.SettingItemView
+                    android:id="@+id/item_language"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:titleText="@string/str_language_select"
+                    />
+            <com.darma.wallet.widget.SettingItemView
+                    android:id="@+id/item_unlock"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:titleText="@string/str_unlock_setting"
+                    app:infoText="@string/str_not_use"
+                    />
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:background="@color/line_color"/>
+
+            <com.darma.wallet.widget.SettingItemView
+                    android:id="@+id/item_backup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:titleText="@string/str_back_up"
+                    />
+
+            <com.darma.wallet.widget.SettingItemView
+                    android:id="@+id/item_agreement"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:titleText="@string/str_agreement"
+                    />
+
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:background="@color/line_color"/>
+
+            <TextView
+                    android:id="@+id/tv_delete"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/button_height"
+                    style="@style/TextView.pink.big"
+                    android:text="@string/str_delet_wallet"
+                    />
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:background="@color/line_color"/>
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/page_margin"
+                    android:orientation="vertical">
+
+                <TextView
+                        style="@style/TextView.smallGray"
+                        android:text="@string/str_official_website"/>
+                <TextView
+                        android:id="@+id/tv_edition"
+                        style="@style/TextView.smallGray"
+                        android:layout_marginTop="@dimen/page_margin"
+
+                        android:layout_marginBottom="40dp"
+                        android:text="@string/str_edition"/>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

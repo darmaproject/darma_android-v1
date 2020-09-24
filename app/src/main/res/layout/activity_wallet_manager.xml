@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/color_page_bg"
+        tools:context=".ui.activity.WalletManagerActivity">
+
+
+
+    <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            style="@style/toolBarStyle"
+
+            >
+
+        <TextView
+                android:id="@+id/tv_header_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:text="@string/str_wallet_manager"
+                style="@style/TextView.titleText"
+                />
+    </android.support.v7.widget.Toolbar>
+
+
+
+
+        <android.support.v7.widget.RecyclerView
+                android:id="@+id/mRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@color/color_white"
+                >
+
+        </android.support.v7.widget.RecyclerView>
+
+
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/page_margin"
+            android:orientation="horizontal">
+
+
+        <Button
+                android:id="@+id/btn_create_wallet"
+                style="@style/BtnView.green"
+                android:text="@string/str_create_wallet"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="0dp"
+                />
+        <Button
+                android:id="@+id/btn_recovery_wallet"
+                style="@style/BtnView.pink"
+                android:text="@string/str_recovery_wallet"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+
+                android:layout_marginRight="0dp"
+                android:layout_marginLeft="10dp"
+                />
+    </LinearLayout>
+
+</LinearLayout>

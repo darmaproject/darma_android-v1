@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:background="@color/color_page_bg"
+              android:orientation="vertical"
+              tools:context=".ui.activity.AuthenticationActivity">
+
+
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_logo_top"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/ll_container"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            />
+    <LinearLayout
+            android:id="@+id/ll_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginLeft="@dimen/page_margin"
+            android:layout_marginRight="@dimen/page_margin"
+            android:orientation="vertical">
+
+
+        <android.support.constraint.ConstraintLayout
+                android:id="@+id/cl_wallet"
+                android:layout_width="match_parent"
+                android:background="@drawable/bg_white"
+                android:layout_height="50dp">
+            <TextView
+                    android:id="@+id/tv_wallet"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginLeft="5dp"
+                    android:text="abc"
+                    style="@style/TextView.black"
+                    />
+            <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_right"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+
+                    android:layout_marginRight="10dp"
+
+                    />
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/line_color"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.design.widget.TextInputLayout
+                android:id="@+id/et_pwd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:hint="@string/str_password"
+                android:orientation="vertical"
+                app:errorEnabled="true"
+                android:layout_marginTop="5dp"
+                app:passwordToggleEnabled="true"
+                app:passwordToggleTint="@color/input_password_btn_color"
+                app:errorTextAppearance="@style/errorAppearance"
+                app:hintTextAppearance="@style/hintTextStyle">
+
+            <android.support.design.widget.TextInputEditText
+                    style="@style/EditText.inputText"
+                    android:inputType="textPassword"
+                    android:imeOptions="actionDone"/>
+
+        </android.support.design.widget.TextInputLayout>
+
+    </LinearLayout>
+
+    <com.dd.CircularProgressButton
+            android:id="@+id/btn_commit"
+            style="@style/circularProgressBtnView"
+            app:cpb_textIdle="@string/str_confirm"
+            android:layout_marginBottom="@dimen/page_bottom_margin"
+
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+</android.support.constraint.ConstraintLayout>

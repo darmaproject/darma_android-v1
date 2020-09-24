@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:background="@color/color_page_bg"
+        tools:context=".ui.activity.InitialActivity">
+
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_logo_top"/>
+    </LinearLayout>
+
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="40dp"
+            style="@style/TextView.black"
+            android:textSize="12sp"
+            android:gravity="center"
+            android:lineSpacingMultiplier="1.5"
+            android:text="@string/str_initial_notice"/>
+
+
+    <Button
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:id="@+id/btn_create_wallet"
+            android:text="@string/str_create_wallet"
+            style="@style/BtnView.green"
+            android:layout_marginTop="20dp"
+
+
+            />
+
+    <Button
+            android:id="@+id/btn_recovery_wallet"
+            style="@style/BtnView.pink"
+            android:text="@string/str_recovery_wallet"
+
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="50dp"
+            />
+</LinearLayout>

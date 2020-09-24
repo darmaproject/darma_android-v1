@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_page_bg"
+        android:orientation="vertical"
+        tools:context="com.darma.wallet.ui.activity.ExchangeDetailActivity">
+
+    <include layout="@layout/layout_top_view" />
+
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/page_margin"
+                android:layout_marginRight="@dimen/page_margin"
+                android:orientation="vertical">
+
+            <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/page_margin">
+
+                <android.support.design.widget.TextInputLayout
+                        android:id="@+id/et_amount"
+                        android:layout_width="@dimen/x200"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/str_amount"
+                        android:orientation="vertical"
+                        app:errorEnabled="true"
+                        app:errorTextAppearance="@style/errorAppearance"
+                        app:hintTextAppearance="@style/hintTextStyle"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                    <android.support.design.widget.TextInputEditText
+                            style="@style/EditText.inputText"
+
+                            android:enabled="false"
+                            android:inputType="textEmailAddress"
+                            android:textColor="@color/text_color_pink"
+                            android:textSize="22sp" />
+                </android.support.design.widget.TextInputLayout>
+
+
+                <ImageView
+                        android:id="@+id/iv_qr"
+                        android:layout_width="@dimen/x70"
+                        android:layout_height="@dimen/x70"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                <android.support.design.widget.TextInputLayout
+                        android:id="@+id/et_status"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/str_order_status"
+                        android:orientation="vertical"
+                        app:errorEnabled="true"
+                        app:errorTextAppearance="@style/errorAppearance"
+                        app:hintTextAppearance="@style/hintTextStyle"
+                        app:layout_constraintTop_toBottomOf="@id/et_amount">
+
+                    <android.support.design.widget.TextInputEditText
+                            style="@style/EditText.inputText"
+
+                            android:enabled="false"
+                            android:inputType="textEmailAddress" />
+                </android.support.design.widget.TextInputLayout>
+
+
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+
+                <android.support.design.widget.TextInputLayout
+                        android:id="@+id/et_order_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/str_ID"
+                        android:orientation="vertical"
+
+                        app:errorEnabled="true"
+                        app:errorTextAppearance="@style/errorAppearance"
+                        app:hintTextAppearance="@style/hintTextStyle"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                    <android.support.design.widget.TextInputEditText
+                            style="@style/EditText.inputText.MultiLine"
+                            android:layout_height="wrap_content"
+                            android:enabled="false"
+
+                            android:paddingRight="40dp" />
+                </android.support.design.widget.TextInputLayout>
+
+
+                <ImageView
+                        android:id="@+id/iv_copy_order_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp"
+                        android:padding="10dp"
+                        android:src="@mipmap/ic_copy_pink"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+            </android.support.constraint.ConstraintLayout>
+
+
+            <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_marginTop="10dp">
+
+                <android.support.design.widget.TextInputLayout
+                        android:id="@+id/et_payment_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/str_payment_id_hint"
+                        android:orientation="vertical"
+
+                        app:errorEnabled="true"
+                        app:errorTextAppearance="@style/errorAppearance"
+                        app:hintTextAppearance="@style/hintTextStyle"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                    <android.support.design.widget.TextInputEditText
+                            style="@style/EditText.inputText.MultiLine"
+                            android:layout_height="wrap_content"
+                            android:enabled="false"
+
+                            android:paddingRight="40dp" />
+                </android.support.design.widget.TextInputLayout>
+
+
+                <ImageView
+                        android:id="@+id/iv_copy_payment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp"
+                        android:padding="10dp"
+                        android:src="@mipmap/ic_copy_pink"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+            </android.support.constraint.ConstraintLayout>
+
+
+            <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+
+                <android.support.design.widget.TextInputLayout
+                        android:id="@+id/et_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/str_send_address"
+                        android:orientation="vertical"
+
+                        app:errorEnabled="true"
+                        app:errorTextAppearance="@style/errorAppearance"
+                        app:hintTextAppearance="@style/hintTextStyle"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                    <android.support.design.widget.TextInputEditText
+                            style="@style/EditText.inputText.MultiLine"
+                            android:layout_height="wrap_content"
+                            android:enabled="false"
+                            android:paddingRight="40dp" />
+                </android.support.design.widget.TextInputLayout>
+
+
+                <ImageView
+                        android:id="@+id/iv_copy_address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp"
+                        android:padding="10dp"
+                        android:src="@mipmap/ic_copy_pink"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+            </android.support.constraint.ConstraintLayout>
+
+            <TextView
+                    android:id="@+id/tv_notice_1"
+                    style="@style/TextView.black"
+                    android:lineSpacingMultiplier="1.5"
+                    android:gravity="left"
+                    android:text="@string/str_trade_notice21" />
+
+            <TextView
+                    android:id="@+id/tv_notice_2"
+                    style="@style/TextView.black"
+                    android:lineSpacingMultiplier="1.5"
+                    android:gravity="left"
+                    android:layout_marginTop="@dimen/page_margin"
+                    android:text="@string/str_trade_notice22"
+                    />
+
+            <TextView
+                    android:id="@+id/tv_time"
+                    style="@style/TextView.black"
+                    android:layout_gravity="center_horizontal"
+                    android:drawableLeft="@mipmap/ic_time"
+                    android:layout_marginTop="@dimen/page_margin"
+                    android:layout_marginBottom="@dimen/page_margin"
+                    android:drawablePadding="5dp"
+                    android:text="29'59''"
+                    />
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+
+    <Button
+            android:id="@+id/btn_commit"
+            style="@style/BtnView.green"
+            android:text="@string/str_pay_now"
+            android:layout_marginBottom="@dimen/page_margin"
+
+            />
+
+
+
+</LinearLayout>

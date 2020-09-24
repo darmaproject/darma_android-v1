@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/color_page_bg"
+        tools:context=".ui.activity.RecoveryWalletActivity">
+
+
+    <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            style="@style/toolBarStyle"
+
+            >
+
+        <TextView
+                android:id="@+id/tv_header_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:text="@string/str_recovery_wallet"
+                style="@style/TextView.titleText"
+                />
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_marginLeft="@dimen/page_margin"
+            android:layout_marginRight="@dimen/page_margin"
+            android:orientation="vertical">
+
+
+        <LinearLayout
+
+                android:id="@+id/ll_private_key"
+
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+
+                android:background="@drawable/shape_green_line_btn"
+                android:orientation="horizontal"
+                android:gravity="center"
+                >
+
+            <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_key"
+                    />
+
+            <TextView
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="wrap_content"
+                    style="@style/TextView.black"
+                    android:text="@string/str_private_key_recovery_wallet"
+                    />
+        </LinearLayout>
+
+
+        <LinearLayout
+
+                android:id="@+id/ll_mnemonic"
+
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+
+                android:layout_marginTop="20dp"
+                android:background="@drawable/shape_green_line_btn"
+                android:orientation="horizontal"
+                android:gravity="center"
+                >
+
+            <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_lock"
+                    />
+
+            <TextView
+                    android:layout_marginLeft="20dp"
+                    style="@style/TextView.black"
+                    android:layout_width="wrap_content"
+                    android:text="@string/str_mnemonic_recovery"
+                    />
+        </LinearLayout>
+
+        <LinearLayout
+
+                android:id="@+id/ll_view_only"
+
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+
+                android:layout_marginTop="20dp"
+                android:background="@drawable/shape_green_line_btn"
+                android:orientation="horizontal"
+                android:gravity="center"
+                >
+
+            <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_view_only"
+                    />
+
+            <TextView
+                    android:layout_marginLeft="20dp"
+                    style="@style/TextView.black"
+                    android:layout_width="wrap_content"
+                    android:text="@string/str_recovery_view_only"
+                    />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

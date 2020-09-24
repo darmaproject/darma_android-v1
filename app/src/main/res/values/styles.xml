@@ -1,0 +1,283 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/input_bottom_line_on_color</item>
+
+        <item name="colorControlNormal">@color/input_bottom_line_color</item>
+
+        <item name="android:windowAnimationStyle">@style/activityAnimation</item>
+        <item name="actionOverflowMenuStyle">@style/AppOverflowMenuStyle</item>
+    </style>
+
+    <style name="activityAnimation" parent="@android:style/Animation">
+        <item name="android:activityOpenEnterAnimation">@anim/slide_right_in</item>
+        <item name="android:activityOpenExitAnimation">@anim/slide_left_out</item>
+        <item name="android:activityCloseEnterAnimation">@anim/slide_left_in</item>
+        <item name="android:activityCloseExitAnimation">@anim/slide_right_out</item>
+    </style>
+
+
+    <style name="AppOverflowMenuStyle" parent="Base.Widget.AppCompat.Light.PopupMenu.Overflow">        <!-- 不让它覆盖 actionbar -->
+        <item name="overlapAnchor">false</item>
+        <item name="android:popupBackground">@color/color_top_bg</item>
+    </style>
+
+    <style name="toolBarStyle">
+
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/top_height</item>
+        <item name="navigationIcon">@mipmap/ic_back</item>
+        <item name="android:background">@color/color_top_bg</item>
+
+
+    </style>
+    <style name="ImageView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+
+    </style>
+    <style name="ImageView.Item">
+        <item name="android:layout_width">30dp</item>
+        <item name="android:layout_height">30dp</item>
+    </style>
+    <style name="BtnView" parent="@style/Widget.AppCompat.Button.Borderless">
+        <item name="android:buttonStyle">?android:attr/borderlessButtonStyle</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">50dp</item>
+
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/btn_text_color</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginRight">@dimen/page_margin</item>
+        <item name="android:layout_marginLeft">@dimen/page_margin</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+    </style>
+
+    <style name="BtnView.common">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/text_color_black</item>
+        <item name="cpb_background">@drawable/bg_white</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginRight">0dp</item>
+        <item name="android:layout_marginLeft">0dp</item>
+    </style>
+
+    <style name="circularProgressBtnView" parent="BtnView">
+
+        <item name="cpb_cornerRadius">8dp</item>
+        <item name="cpb_background">@drawable/shape_green_btn</item>
+        <item name="cpb_stroke">0dp</item>
+        <item name="cpb_selectorIdle">@color/idle_state_selector</item>
+        <item name="cpb_iconComplete">@mipmap/ic_action_accept</item>
+        <item name="cpb_iconError">@mipmap/ic_action_cancel</item>
+        <item name="android:textColor">@color/text_color_white</item>
+
+    </style>
+
+    <style name="BtnView.green">
+
+        <item name="android:background">@drawable/shape_green_btn</item>
+    </style>
+
+    <style name="BtnView.pink">
+
+        <item name="android:background">@drawable/shape_pink_btn</item>
+    </style>
+
+    <style name="TextView">
+
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="TextView.black">
+        <item name="android:textColor">@color/text_color_black</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="TextView.black.CoinName">
+        <item name="android:textSize">20sp</item>
+
+        <item name="android:textAllCaps">true</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+    </style>
+
+    <style name="TextView.pink">
+        <item name="android:textColor">@color/text_color_pink</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="TextView.red">
+        <item name="android:textColor">@color/text_color_red</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="TextView.pink.small">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="TextView.pink.big">
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="TextView.black.small">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="TextView.green">
+        <item name="android:textColor">@color/text_color_green</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="TextView.green.small">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="TextView.gray">
+        <item name="android:textColor">@color/text_color_gray</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="TextView.smallGray">
+        <item name="android:textColor">@color/text_color_gray</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="TextView.black.Number">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="TextView.bigNumber">
+        <item name="android:textColor">@color/text_color_green</item>
+        <item name="android:textSize">28sp</item>
+    </style>
+
+    <style name="TextView.titleText">
+        <item name="android:textColor">@color/text_color_black</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="TextView.subtitle">
+        <item name="android:textColor">@color/text_color_black</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="TextView.tabText">
+        <item name="android:button">@null</item>
+        <item name="android:textColor">@color/color_selector_tab</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="EditText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/input_height</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:inputType">text</item>
+        <item name="android:maxLength">100</item>
+    </style>
+
+    <style name="errorAppearance" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/text_color_red</item>
+    </style>
+
+    <style name="hintTextStyle">
+
+        <item name="android:textColor">@color/text_color_gray</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="EditText.inputText">
+
+        <item name="colorControlActivated">@color/input_bottom_line_on_color</item>
+        <item name="android:textColorHint">@color/text_color_gray</item>
+        <item name="android:textCursorDrawable">@drawable/shape_cursor</item>
+        <item name="android:textColor">@color/text_color_black</item>
+
+    </style>
+
+    <style name="EditText.inputText.MultiLine">
+
+        <item name="android:textSize">14sp</item>
+        <item name="android:inputType">text|textMultiLine</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:maxLines">4</item>
+        <item name="android:singleLine">false</item>
+        <item name="android:maxLength">200</item>
+        <item name="android:minHeight">@dimen/input_height</item>
+    </style>
+
+    <style name="EditText.inputText.number">
+
+        <item name="android:inputType">numberDecimal</item>
+        <item name="android:maxLength">18</item>
+    </style>
+
+    <style name="EditText.inputText.password">
+        <item name="passwordToggleTint">#D2D6DC</item>
+        <item name="android:inputType">textPassword</item>
+        <item name="android:maxLength">32</item>
+    </style>
+
+    <style name="Dialog" parent="AppTheme">
+        <!-- 边框 -->
+        <item name="android:windowFrame">@null</item>
+        <!-- 无标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 背景透明 -->
+        <item name="android:windowBackground">@drawable/bg_dialog_white</item>
+        <!-- 悬浮在Activity上 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 对话框是否有遮盖 -->
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="Dialog.input">
+        <item name="android:windowSoftInputMode">stateAlwaysVisible</item>
+    </style>
+
+    <style name="Dialog.bottom">
+
+        <item name="android:windowBackground">@drawable/bg_dialog_bottom_white</item>
+        <item name="android:windowAnimationStyle">@style/BottomDialogAnimation</item>
+    </style>
+
+    <style name="Progressbar" parent="Widget.AppCompat.ProgressBar">
+        <item name="android:indeterminateDrawable">@drawable/progress_loading_pink</item>
+
+    </style>
+
+    <style name="Progressbar.horizontal" parent="Widget.AppCompat.ProgressBar.Horizontal">
+        <item name="android:minHeight">8dp</item>
+        <item name="android:maxHeight">8dp</item>
+        <item name="android:layout_marginLeft">0dp</item>
+        <item name="android:layout_marginRight">0dp</item>
+        <item name="android:paddingLeft">0dp</item>
+    </style>
+    <!-- 底部弹出Dialog动画 -->
+    <style name="BottomDialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/input_method_enter</item>
+        <item name="android:windowExitAnimation">@anim/input_method_exit</item>
+    </style>
+
+    <style name="SwitchView">
+        <item name="hasShadow">true</item>
+        <item name="primaryColor">@color/text_color_green</item>
+        <!--<item name="primaryColorDark">@color/text_color_green</item>-->
+        <item name="offColor">#D1D5DB</item>
+        <item name="offColorDark">#D1D5DB</item>
+        <item name="shadowColor">#000</item>
+        <item name="ratioAspect">0.6</item>
+        <item name="isOpened">false</item>
+
+
+    </style>
+</resources>
